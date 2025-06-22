@@ -1,0 +1,55 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FTSApp - UI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <button class="dark-toggle" id="toggleDark">🌙 Modo oscuro</button>
+    <main>
+        <h1>FTSApp - File Transfer Secure</h1>
+
+        <!-- Sección de carga -->
+        <section class="upload">
+            <h2>Subir archivo</h2>
+            <form id="uploadForm">
+                <input type="file" name="file" id="fileInput" required />
+                <button type="submit">Subir</button>
+            </form>
+        </section>
+
+        <!-- Sección de archivos -->
+        <section class="files">
+            <h2>Archivos en el servidor</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="fileTableBody">
+                    <!-- Archivos cargados dinámicamente -->
+                </tbody>
+            </table>
+        </section>
+        <section class="footer">
+           <h3>¡Gracias por usar FTSApp!</h3> 
+        </section>
+    </main>
+    <script>
+        // Alternar modo oscuro
+        document.getElementById('toggleDark').onclick = function () {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
